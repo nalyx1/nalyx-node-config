@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "start": "node dist/index.js",
-    "start:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "start:dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
     "husky:prepare": "husky install",
     "test": "jest --passWithNoTests",
     "test:watch": "npm run test -- --watch",
@@ -30,6 +30,8 @@
     "prettier": "^2.8.1",
     "ts-jest": "^29.0.3",
     "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.2",
+    "tsconfig-paths": "^4.1.1",
     "typescript": "^4.9.4"
   }
 }
