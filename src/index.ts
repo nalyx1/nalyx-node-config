@@ -1,1 +1,5 @@
-console.log('working')
+export class Person {
+  sayMyName() {
+    return 'Joao'
+  }
+}
